@@ -16,6 +16,7 @@ for path in paths:
         if any(f.endswith('.mp4') for f in files) and any(f.endswith('.txt') for f in files):
             # filter by mp4 and txt in current path
             files = [f for f in files if f.endswith('.mp4') or f.endswith('.txt')]
+            files.sort()
             #create folder with every two of the filtered files
             for i in range(0, len(files), 2):
                 folder = os.path.join(root, files[i][:-4])
